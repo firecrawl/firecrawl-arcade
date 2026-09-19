@@ -157,16 +157,12 @@ evals/eval_firecrawl.py
 tests/
 ```
 
-## Handoff checklist for Arcade (Valerie)
+## Verification checklist
 
-1. Review tool inventory and preserved names (`ScrapeUrl`, `MapWebsite`, `CrawlWebsite`, `GetCrawlStatus`, `GetCrawlData`, `CancelCrawl`)
-2. Confirm `FIRECRAWL_API_KEY` secret wiring (stdio locally; Arcade Cloud secrets in prod)
-3. Run `arcade evals .` and confirm the five confusable-intent cases pass
-4. Deploy behind an MCP Gateway (`arcade deploy -e firecrawl_arcade/server.py`)
-5. Retire proprietary `arcade-firecrawl` 3.1.2 (`firecrawl-py<2`) once this replaces it
-6. Optional: merge Firecrawl python-sdk `origin=` PR so attribution no longer needs the HTTP patch fallback
-
-Contact: Firecrawl partnerships / platform (handoff package is this repo + README).
+1. Tool inventory: the six preserved names (`ScrapeUrl`, `MapWebsite`, `CrawlWebsite`, `GetCrawlStatus`, `GetCrawlData`, `CancelCrawl`) resolve to the tools listed above
+2. Secrets: `FIRECRAWL_API_KEY` is set (`.env` over stdio locally, Arcade Cloud secrets when deployed)
+3. Evals: `uv run arcade evals .` passes the five confusable-intent cases
+4. Deploy: `arcade deploy -e firecrawl_arcade/server.py` behind an MCP Gateway
 
 ## License
 
