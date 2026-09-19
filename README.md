@@ -167,3 +167,7 @@ tests/
 6. Optional: merge Firecrawl python-sdk `origin=` PR so attribution no longer needs the HTTP patch fallback
 
 Contact: Firecrawl partnerships / platform (handoff package is this repo + README).
+
+## License
+
+MIT. See [LICENSE](LICENSE).
